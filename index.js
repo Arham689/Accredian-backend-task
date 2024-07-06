@@ -6,7 +6,9 @@ const app = express();
 require('dotenv').config();
 
 
-app.use(cors());
+app.use(cors( {
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
+  }));
 app.use(bodyParser.json());
 
 const port = process.env.PORT || 3000;
