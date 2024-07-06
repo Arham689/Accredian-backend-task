@@ -7,7 +7,8 @@ require('dotenv').config();
 
 
 app.use(cors( {
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
   }));
 app.use(bodyParser.json());
 
